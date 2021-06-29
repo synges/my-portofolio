@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import tw from 'twin.macro'
@@ -22,7 +21,7 @@ const NavLinks = tw.div`inline-block`
  */
 const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-  font-semibold tracking-wide transition duration-300
+  font-semibold tracking-wide transition duration-300 text-secondary-500
   pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `
 
@@ -34,7 +33,7 @@ const PrimaryLink = tw(NavLink)`
 `
 
 const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  ${tw`flex items-center font-black text-secondary-500 border-b-0 text-2xl! ml-0!`};
 
   img {
     ${tw`w-10 mr-3`}
@@ -57,17 +56,17 @@ const DesktopNavLinks = tw.nav`
   hidden lg:flex flex-1 justify-between items-center
 `
 
-export default () => {
+const Header = () => {
   const links = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
+      <NavLink href="/#">Skills</NavLink>
+      <NavLink href="/#">Work Experience</NavLink>
+      <NavLink href="/#">Projects</NavLink>
+      <NavLink href="/#">Education</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink css={tw`rounded-full`} href="/#">
-        Sign Up
+        Download Resume
       </PrimaryLink>
     </NavLinks>,
   ]
@@ -119,3 +118,5 @@ export default () => {
     </Wraper>
   )
 }
+
+export default Header
