@@ -1,13 +1,15 @@
-import logo from './logo.svg'
 import './App.css'
+import 'tailwindcss/dist/base.css'
+import Header from './components/Header'
+import tw from 'twin.macro'
 
-function App() {
+const Page = tw.div`p-8`
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Ahmed Aziz</p>
-      </header>
-    </div>
+    <Page>
+      <Header />
+    </Page>
   )
 }
 
