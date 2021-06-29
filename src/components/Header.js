@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import tw from 'twin.macro'
 import styled from 'styled-components'
-import { css } from 'styled-components/macro' //eslint-disable-line
 import { useAnimation, useCycle } from 'framer-motion'
 
 import logo from '../images/logo.svg'
@@ -29,7 +28,7 @@ const PrimaryLink = tw(NavLink)`
   lg:mx-0
   px-8 py-3 rounded bg-primary-500 text-gray-100
   hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
-  border-b-0
+  border-b-0 rounded-full
 `
 
 const LogoLink = styled(NavLink)`
@@ -40,34 +39,32 @@ const LogoLink = styled(NavLink)`
   }
 `
 
-const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`
+const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between lg:hidden`
 const NavToggle = tw.button`
   lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
 `
 
 const MobileNavLinks = motion(styled.div`
-  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
+  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white lg:hidden`}
   ${NavLinks} {
     ${tw`flex flex-col items-center`}
   }
 `)
 
 const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 justify-between items-center
+  hidden lg:flex flex-1 justify-between items-center lg:flex
 `
 
 const Header = () => {
   const links = [
     <NavLinks key={1}>
       <NavLink href="/#">Skills</NavLink>
-      <NavLink href="/#">Work Experience</NavLink>
+      <NavLink href="/#">Work</NavLink>
       <NavLink href="/#">Projects</NavLink>
       <NavLink href="/#">Education</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink css={tw`rounded-full`} href="/#">
-        Download Resume
-      </PrimaryLink>
+      <PrimaryLink href="/#">Download Resume</PrimaryLink>
     </NavLinks>,
   ]
 
@@ -90,17 +87,16 @@ const Header = () => {
 
   return (
     <Wraper>
-      <DesktopNavLinks css={tw`lg:flex`}>
+      <DesktopNavLinks>
         {logoLink}
         {links}
       </DesktopNavLinks>
 
-      <MobileNavLinksContainer css={tw`lg:hidden`}>
+      <MobileNavLinksContainer>
         {logoLink}
         <MobileNavLinks
           initial={{ x: '150%', display: 'none' }}
           animate={animation}
-          css={tw`lg:hidden`}
         >
           {links}
         </MobileNavLinks>

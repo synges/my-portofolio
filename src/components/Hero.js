@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
-import Header from 'components/Header.js'
 import { SectionHeading } from 'components/misc/Headings.js'
 import { SectionDescription } from 'components/misc/Typography.js'
 import { PrimaryButton as PrimaryButtonBase } from 'components/misc/Buttons.js'
@@ -11,6 +10,9 @@ import {
 } from 'components/misc/Layouts.js'
 import { ReactComponent as QuotesLeftIconBase } from 'images/quotes-l.svg'
 import { ReactComponent as SvgDecoratorBlob1 } from 'images/dot-pattern.svg'
+import { ReactComponent as LinkedInIcon } from 'images/linkedin-icon.svg'
+import { ReactComponent as GitHubIcon } from 'images/github-icon.svg'
+import { ReactComponent as EmailIcon } from 'images/email-newsletter-icon.svg'
 
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`
 const Column = tw.div``
@@ -37,8 +39,15 @@ const QuotesLeftIcon = tw(
 )`w-16 h-16 md:w-12 md:h-12 absolute top-0 left-0 text-gray-100 md:text-red-500 transform translate-x-1 md:-translate-x-1/2 md:-translate-y-5 opacity-10 md:opacity-100`
 const Quote = tw.blockquote``
 
+const SocialLinksContainer = tw.div`mt-10`
+const SocialLink = styled.a`
+  ${tw`cursor-pointer inline-block text-primary-400 hover:text-primary-900 transition duration-300 mx-4`}
+  svg {
+    ${tw`w-8 h-8`}
+  }
+`
 const Hero = ({
-  heading = 'Full Stack Web Developer',
+  heading = 'Full Stack Developer',
   description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
   imageSrc = 'https://i.postimg.cc/WzbjNG0s/Ahmed-Picture.jpg',
   primaryButtonUrl = 'https://google.com',
@@ -47,7 +56,6 @@ const Hero = ({
 }) => {
   return (
     <>
-      <Header />
       <Container>
         <ContentWithVerticalPadding>
           <Row>
@@ -57,6 +65,17 @@ const Hero = ({
               <PrimaryButton as="a" href={primaryButtonUrl}>
                 {primaryButtonText}
               </PrimaryButton>
+              <SocialLinksContainer>
+                <SocialLink href="https://facebook.com">
+                  <LinkedInIcon />
+                </SocialLink>
+                <SocialLink href="https://twitter.com">
+                  <GitHubIcon />
+                </SocialLink>
+                <SocialLink href="https://youtube.com">
+                  <EmailIcon />
+                </SocialLink>
+              </SocialLinksContainer>
             </TextColumn>
             <ImageColumn>
               <ImageContainer>
