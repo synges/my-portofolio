@@ -42,7 +42,7 @@ const SvgDotPattern4 = tw(
 
 const Work = ({ cards }) => {
   return (
-    <Container>
+    <Container id="work">
       <SingleColumn>
         <HeadingInfoContainer>
           <HeadingTitle>Popular Events</HeadingTitle>
