@@ -6,6 +6,7 @@ import PageAnimation from 'components/PageAnimation'
 import Footer from 'components/Footer'
 import ContactMe from 'components/ContactMe'
 import Work from 'components/Work'
+import Skills from 'components/Skills'
 
 const cards = [
   {
@@ -44,6 +45,7 @@ const App = () => {
     <PageAnimation>
       <Header />
       <Hero />
+      <Skills />
       <Work cards={cards} />
       <ContactMe />
       <Footer />

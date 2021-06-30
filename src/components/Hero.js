@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 import { SectionHeading } from 'components/misc/Headings.js'
 import { SectionDescription } from 'components/misc/Typography.js'
-import { PrimaryButton as PrimaryButtonBase } from 'components/misc/Buttons.js'
 import {
   Container,
   ContentWithVerticalPadding,
 } from 'components/misc/Layouts.js'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { ReactComponent as QuotesLeftIconBase } from 'images/quotes-l.svg'
 import { ReactComponent as SvgDecoratorBlob1 } from 'images/dot-pattern.svg'
 import { ReactComponent as LinkedInIcon } from 'images/linkedin-icon.svg'
@@ -19,13 +19,13 @@ const Column = tw.div``
 const TextColumn = tw(Column)`mr-auto lg:mr-0 max-w-lg lg:max-w-xl xl:max-w-2xl`
 const Heading = tw(
   SectionHeading
-)`text-left text-primary-900 leading-snug xl:text-6xl`
+)`text-left text-primary-500 leading-snug xl:text-6xl`
 const Description = tw(
   SectionDescription
 )`mt-4 lg:text-base text-secondary-500 max-w-lg`
 const PrimaryButton = tw(
-  PrimaryButtonBase
-)`mt-8 inline-block w-56 tracking-wide text-center py-5 rounded-full`
+  AnchorLink
+)`mt-8 inline-block w-56 tracking-wide text-center py-5 rounded-full px-8 py-3 font-bold bg-primary-500 text-gray-100 hocus:bg-primary-900 hocus:text-gray-200 focus:shadow-outline focus:outline-none transition duration-300`
 const ImageColumn = tw(Column)`ml-auto lg:mr-0 relative mt-16 lg:mt-0 lg:ml-32`
 const ImageContainer = tw.div`relative z-40 transform xl:-translate-x-24 xl:-translate-y-16`
 const Image = tw.img`max-w-full w-96 rounded-t sm:rounded relative z-20`
@@ -50,7 +50,7 @@ const Hero = ({
   heading = 'Full Stack Developer',
   description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
   imageSrc = 'https://i.postimg.cc/WzbjNG0s/Ahmed-Picture.jpg',
-  primaryButtonUrl = 'https://google.com',
+  primaryButtonUrl = '#contact',
   primaryButtonText = 'Contact Me',
   testimonial = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 }) => {
@@ -62,17 +62,17 @@ const Hero = ({
             <TextColumn>
               <Heading>{heading}</Heading>
               <Description>{description}</Description>
-              <PrimaryButton as="a" href={primaryButtonUrl}>
+              <PrimaryButton href={primaryButtonUrl}>
                 {primaryButtonText}
               </PrimaryButton>
               <SocialLinksContainer>
-                <SocialLink href="https://facebook.com">
+                <SocialLink href="https://www.linkedin.com/in/ahmedaziz23/">
                   <LinkedInIcon />
                 </SocialLink>
-                <SocialLink href="https://twitter.com">
+                <SocialLink href="https://github.com/synges">
                   <GitHubIcon />
                 </SocialLink>
-                <SocialLink href="https://youtube.com">
+                <SocialLink href="mailto:ahmedshawky23@gmail.com">
                   <EmailIcon />
                 </SocialLink>
               </SocialLinksContainer>

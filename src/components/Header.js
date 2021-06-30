@@ -3,14 +3,15 @@ import { motion } from 'framer-motion'
 import tw from 'twin.macro'
 import styled from 'styled-components'
 import { useAnimation, useCycle } from 'framer-motion'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import logo from '../images/logo.svg'
 import { ReactComponent as MenuIcon } from 'feather-icons/dist/icons/menu.svg'
 import { ReactComponent as CloseIcon } from 'feather-icons/dist/icons/x.svg'
 
-const Wraper = tw.header`
+const Container = tw.header`
   flex justify-between items-center
-  max-w-none mx-auto
+  max-w-none mx-auto p-5 pb-8
 `
 
 const NavLinks = tw.div`inline-block`
@@ -18,16 +19,17 @@ const NavLinks = tw.div`inline-block`
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
-const NavLink = tw.a`
-  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+const NavLink = tw(AnchorLink)`
+  text-lg my-2 lg:text-sm  lg:my-0 lg:mx-8
   font-semibold tracking-wide transition duration-300 text-secondary-500
   pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `
 
-const PrimaryLink = tw(NavLink)`
-  lg:mx-0
+const PrimaryLink = tw.a`
+  lg:mx-0  text-lg my-2 lg:text-sm  lg:my-0
+  font-semibold tracking-wide transition duration-300
   px-8 py-3 rounded bg-primary-500 text-gray-100
-  hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
+  hocus:bg-primary-900 hocus:text-gray-200 focus:shadow-outline
   border-b-0 rounded-full
 `
 
@@ -58,13 +60,18 @@ const DesktopNavLinks = tw.nav`
 const Header = () => {
   const links = [
     <NavLinks key={1}>
-      <NavLink href="/#">Skills</NavLink>
-      <NavLink href="/#">Work</NavLink>
-      <NavLink href="/#">Projects</NavLink>
-      <NavLink href="/#">Education</NavLink>
+      <NavLink href="#skills">Skills</NavLink>
+      <NavLink href="#work">Work</NavLink>
+      <NavLink href="#projects">Projects</NavLink>
+      <NavLink href="#education">Education</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink href="/#">Download Resume</PrimaryLink>
+      <PrimaryLink
+        href="https://drive.google.com/uc?export=download&id=11b3dTCZscchgS5MAGfTb1CSv0ylgCz-D"
+        download
+      >
+        Download Resume
+      </PrimaryLink>
     </NavLinks>,
   ]
 
@@ -86,7 +93,7 @@ const Header = () => {
   )
 
   return (
-    <Wraper>
+    <Container id="header">
       <DesktopNavLinks>
         {logoLink}
         {links}
@@ -111,7 +118,7 @@ const Header = () => {
           )}
         </NavToggle>
       </MobileNavLinksContainer>
-    </Wraper>
+    </Container>
   )
 }
 

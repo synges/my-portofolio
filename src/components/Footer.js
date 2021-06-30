@@ -3,6 +3,7 @@ import tw from 'twin.macro'
 import styled from 'styled-components'
 import { Container as ContainerBase } from 'components/misc/Layouts.js'
 import logo from 'images/logo.svg'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { ReactComponent as LinkedInIcon } from 'images/linkedin-icon.svg'
 import { ReactComponent as GitHubIcon } from 'images/github-icon.svg'
 import { ReactComponent as EmailIcon } from 'images/email-newsletter-icon.svg'
@@ -17,7 +18,9 @@ const LogoImg = tw.img`w-8`
 const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`
 
 const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`
-const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`
+const Link = tw(
+  AnchorLink
+)`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`
 
 const SocialLinksContainer = tw.div`mt-10`
 const SocialLink = styled.a`
@@ -39,20 +42,20 @@ const Footer = () => {
             <LogoText>Ahmed Aziz</LogoText>
           </LogoContainer>
           <LinksContainer>
-            <Link href="#">Home</Link>
-            <Link href="#">Skills</Link>
-            <Link href="#">Work</Link>
-            <Link href="#">Projects</Link>
-            <Link href="#">Education</Link>
+            <Link href="#header">Home</Link>
+            <Link href="#skills">Skills</Link>
+            <Link href="#work">Work</Link>
+            <Link href="#projects">Projects</Link>
+            <Link href="#education">Education</Link>
           </LinksContainer>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            <SocialLink href="https://www.linkedin.com/in/ahmedaziz23/">
               <LinkedInIcon />
             </SocialLink>
-            <SocialLink href="https://twitter.com">
+            <SocialLink href="https://github.com/synges">
               <GitHubIcon />
             </SocialLink>
-            <SocialLink href="https://youtube.com">
+            <SocialLink href="mailto:ahmedshawky23@gmail.com">
               <EmailIcon />
             </SocialLink>
           </SocialLinksContainer>
