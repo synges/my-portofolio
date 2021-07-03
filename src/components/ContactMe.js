@@ -7,6 +7,7 @@ import {
 } from 'components/misc/Headings.js'
 import { PrimaryButton as PrimaryButtonBase } from 'components/misc/Buttons.js'
 import EmailIllustrationSrc from 'images/email-illustration.svg'
+import emailjs from 'emailjs-com'
 
 const Container = tw.div`relative`
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`
@@ -48,11 +49,28 @@ const ContactMe = ({
   ),
   description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   submitButtonText = 'Send',
-  formAction = '#',
-  formMethod = 'get',
   textOnLeft = true,
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'gmail',
+        'template_qdbmktu',
+        e.target,
+        'user_3XxV613K5PXDydSwOg3pA'
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
 
   return (
     <Container id="contact">
@@ -65,12 +83,8 @@ const ContactMe = ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
-            <Form action={formAction} method={formMethod}>
-              <Input
-                type="email"
-                name="email"
-                placeholder="Your Email Address"
-              />
+            <Form onSubmit={sendEmail}>
+              <Input type="email" name="email" placeholder="Email Address" />
               <Input type="text" name="name" placeholder="Full Name" />
               <Input type="text" name="subject" placeholder="Subject" />
               <Textarea name="message" placeholder="Your Message Here" />

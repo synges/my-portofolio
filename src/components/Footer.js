@@ -59,9 +59,7 @@ const Footer = () => {
               <EmailIcon />
             </SocialLink>
           </SocialLinksContainer>
-          <CopyrightText>
-            &copy; Copyright 2021, Ahmed Aziz All Rights Reserved.
-          </CopyrightText>
+          <CopyrightText>&copy; 2021 by Ahmed Aziz</CopyrightText>
         </Row>
       </Content>
     </Container>

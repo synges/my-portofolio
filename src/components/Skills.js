@@ -52,7 +52,12 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
 
 const Skills = ({
   cards = null,
-  description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  heading = (
+    <>
+      Languages & <span tw="text-primary-500">Skills</span>
+    </>
+  ),
+  description = 'These are some of the languages and technologies I used',
 }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
@@ -81,10 +86,8 @@ const Skills = ({
   return (
     <Container id="skills">
       <ThreeColumnContainer>
-        <Heading>Skills</Heading>
-        <Description>
-          These are some of the Languages and Technologies I used
-        </Description>
+        <Heading>{heading}</Heading>
+        <Description>{description}</Description>
         <VerticalSpacer />
         {cards.map((card, i) => (
           <Column key={i}>

@@ -2,10 +2,7 @@ import React from 'react'
 import tw from 'twin.macro'
 import styled from 'styled-components'
 import { css } from 'styled-components/macro' //eslint-disable-line
-import {
-  SectionHeading as HeadingTitle,
-  Subheading,
-} from 'components/misc/Headings.js'
+import { SectionHeading as HeadingTitle } from 'components/misc/Headings.js'
 import { PrimaryButton as PrimaryButtonBase } from 'components/misc/Buttons.js'
 import { ReactComponent as SvgDecoratorBlob1 } from 'images/svg-decorator-blob-1.svg'
 import { ReactComponent as SvgDecoratorBlob2 } from 'images/svg-decorator-blob-3.svg'
@@ -47,10 +44,9 @@ const DecoratorBlob2 = tw(
 )`-z-10 absolute top-0 left-0 w-48 h-48 transform -translate-x-32 translate-y-full opacity-25`
 
 const Projects = ({
-  subheading = 'Blog',
   heading = (
     <>
-      We Love <span tw="text-primary-500">Writing.</span>
+      Personal <span tw="text-primary-500">Projects</span>
     </>
   ),
   description = 'Some amazing blog posts that are written by even more amazing people.',
@@ -91,7 +87,6 @@ const Projects = ({
     <Container id="projects">
       <Content>
         <HeadingInfoContainer>
-          {subheading && <Subheading>{subheading}</Subheading>}
           <HeadingTitle>{heading}</HeadingTitle>
           <HeadingDescription>{description}</HeadingDescription>
         </HeadingInfoContainer>

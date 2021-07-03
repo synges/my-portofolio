@@ -20,7 +20,7 @@ const NavLinks = tw.div`inline-block`
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
 const NavLink = tw(AnchorLink)`
-  text-lg my-2 lg:text-sm  lg:my-0 lg:mx-8
+  text-lg my-2  lg:text-base  lg:my-0 lg:mx-12
   font-semibold tracking-wide transition duration-300 text-secondary-500
   pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `
@@ -30,7 +30,7 @@ const PrimaryLink = tw.a`
   font-semibold tracking-wide transition duration-300
   px-8 py-3 rounded bg-primary-500 text-gray-100
   hocus:bg-primary-900 hocus:text-gray-200 focus:shadow-outline
-  border-b-0 rounded-full
+  border-b-0 rounded-full whitespace-nowrap
 `
 
 const LogoLink = styled(NavLink)`
@@ -54,7 +54,7 @@ const MobileNavLinks = motion(styled.div`
 `)
 
 const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 justify-between items-center lg:flex
+  hidden lg:flex flex-1 justify-between items-center 
 `
 
 const Header = () => {
