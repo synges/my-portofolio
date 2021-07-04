@@ -37,7 +37,7 @@ const LogoLink = styled(NavLink)`
   ${tw`flex items-center font-black text-secondary-500 border-b-0 text-2xl! ml-0!`};
 
   img {
-    ${tw`w-10 mr-3`}
+    ${tw`w-10 mr-3 text-primary-500`}
   }
 `
 
