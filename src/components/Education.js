@@ -14,22 +14,21 @@ import 'slick-carousel/slick/slick.css'
 const Container = tw.div`relative`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
 const HeadingInfoContainer = tw.div`flex flex-col items-center`
-const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-center max-w-sm`
 
-const TestimonialSliderContainer = tw.div`mt-24`
-const TestimonialSlider = styled(Slider)``
-const Testimonial = tw.div`flex! flex-col items-center md:items-stretch md:flex-row md:justify-center outline-none`
+const CollegeSliderContainer = tw.div`mt-24`
+const CollgeSlider = styled(Slider)``
+const College = tw.div`flex! flex-col items-center md:items-stretch md:flex-row md:justify-center outline-none`
 const ImageContainer = styled.div`
-  ${tw`md:mx-3 lg:mx-6 w-2/3 md:w-4/12 rounded flex items-center max-w-xs md:max-w-none`}
+  ${tw`md:mx-3 lg:mx-6 w-2/3 md:w-6/12 rounded flex items-center max-w-md md:max-w-none`}
   img {
     ${tw`rounded`}
   }
 `
-const TextContainer = tw.div`md:mx-3 lg:mx-6 md:w-6/12 py-4 flex flex-col justify-between`
-const QuoteContainer = tw.div`relative p-6 md:p-8 lg:p-10 mt-4 md:mt-0`
-const Quote = tw.blockquote`text-center md:text-left font-medium text-xl lg:text-2xl xl:text-3xl`
-const CustomerInfo = tw.div`px-5 lg:px-10 text-center md:text-left mt-4 md:mt-0`
-const CustomerName = tw.h5`font-bold text-lg lg:text-xl xl:text-2xl text-primary-500`
+const TextContainer = tw.div`md:mx-3 lg:mx-6 md:w-4/12 py-4 flex flex-col justify-between`
+const DescriptionContainer = tw.div`relative p-6 md:p-8 lg:p-10 mt-4 md:mt-0`
+const Description = tw.blockquote`text-center md:text-left font-medium text-xl lg:text-2xl xl:text-3xl`
+const CollegeInfo = tw.div`px-5 lg:px-10 text-center md:text-left mt-4 md:mt-0`
+const CollegeName = tw.h5`font-bold text-lg lg:text-xl xl:text-2xl text-primary-500`
 const CustomerTitle = tw.p`font-medium text-sm`
 
 const SliderControlButtonContainer = styled.div`
@@ -75,30 +74,27 @@ const Education = ({
    * You can modify the testimonials shown by modifying the array below
    * You can add or remove objects from the array as you need.
    */
-  const testimonials = [
+  const courses = [
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80',
-      quote:
+      imageSrc: 'https://i.postimg.cc/tTwPW4RZ/Algonquin.jpg',
+      description:
         'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
-      customerName: 'Charlotte Hale',
-      customerTitle: 'CEO, Delos Inc.',
+      collegeName: 'Algonquin College',
+      courseDate: 'May 2021',
     },
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80',
-      quote:
+      imageSrc: 'https://i.postimg.cc/T1nybjHF/AAST.jpg',
+      description:
         'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
-      customerName: 'Adam Cuppy',
-      customerTitle: 'Founder, EventsNYC',
+      collegeName: 'Arab Academy for Sceience and Technology',
+      courseDate: 'July 2012',
     },
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80',
-      quote:
+      imageSrc: 'https://i.postimg.cc/sXh1F9yx/Full-Stack.png',
+      description:
         'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
-      customerName: 'Steven Marcetti',
-      customerTitle: 'Event Manager, Brite',
+      collegeName: 'University of Helsinki',
+      courseDate: 'July 2021',
     },
   ]
   return (
@@ -106,34 +102,27 @@ const Education = ({
       <Content>
         <HeadingInfoContainer>
           <HeadingTitle>{heading}</HeadingTitle>
-          <HeadingDescription></HeadingDescription>
         </HeadingInfoContainer>
-        <TestimonialSliderContainer>
-          <TestimonialSlider
-            nextArrow={<NextArrow />}
-            prevArrow={<PreviousArrow />}
-          >
-            {testimonials.map((testimonial, index) => (
-              <Testimonial key={index}>
+        <CollegeSliderContainer>
+          <CollgeSlider nextArrow={<NextArrow />} prevArrow={<PreviousArrow />}>
+            {courses.map((course, index) => (
+              <College key={index}>
                 <ImageContainer>
-                  <img
-                    src={testimonial.imageSrc}
-                    alt={testimonial.customerName}
-                  />
+                  <img src={course.imageSrc} alt={course.collegeName} />
                 </ImageContainer>
                 <TextContainer>
-                  <QuoteContainer>
-                    <Quote>{testimonial.quote}</Quote>
-                  </QuoteContainer>
-                  <CustomerInfo>
-                    <CustomerName>{testimonial.customerName}</CustomerName>
-                    <CustomerTitle>{testimonial.customerTitle}</CustomerTitle>
-                  </CustomerInfo>
+                  <DescriptionContainer>
+                    <Description>{course.description}</Description>
+                  </DescriptionContainer>
+                  <CollegeInfo>
+                    <CollegeName>{course.collegeName}</CollegeName>
+                    <CustomerTitle>{course.courseDate}</CustomerTitle>
+                  </CollegeInfo>
                 </TextContainer>
-              </Testimonial>
+              </College>
             ))}
-          </TestimonialSlider>
-        </TestimonialSliderContainer>
+          </CollgeSlider>
+        </CollegeSliderContainer>
       </Content>
       <DecoratorBlob1 />
       <DecoratorBlob2 />
