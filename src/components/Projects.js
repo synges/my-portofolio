@@ -51,12 +51,10 @@ const Projects = ({
   ),
   description = 'Some amazing blog posts that are written by even more amazing people.',
 }) => {
-  const blogPosts = [
+  const projects = [
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80',
-      author: 'Adam Wathan',
-      category: 'SEO',
+      imageSrc: 'https://i.postimg.cc/PJzdQSzG/python.png',
+      technologies: ['Python', 'Flask', 'MySQL'],
       title: 'Optimizing your website for your main keyword',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -65,22 +63,19 @@ const Projects = ({
     {
       imageSrc:
         'https://images.unsplash.com/photo-1479660095429-2cf4e1360472?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80',
-      author: 'Owais Khan',
-      category: 'Advertising',
-      title: 'Creating The perfect advertisement campaign',
+      technologies: ['React Native', 'React', 'FireStore'],
+      title: 'Mobile Application for RiverOak Skating Trails',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       url: 'https://timerse.com',
     },
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1579869847514-7c1a19d2d2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      author: 'Steve Schoger',
-      category: 'Social Media',
-      title: 'Efficient management of your social media assets',
+      imageSrc: 'https://i.postimg.cc/PJzdQSzG/python.png',
+      technologies: ['Python', 'Flask', 'MySQL'],
+      title: 'Covid-19 Data Visualization Website',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      url: 'https://timerse.com',
+      url: 'https://github.com/synges/Flask-Covid-19',
     },
   ]
   return (
@@ -91,22 +86,21 @@ const Projects = ({
           <HeadingDescription>{description}</HeadingDescription>
         </HeadingInfoContainer>
         <ThreeColumn>
-          {blogPosts.map((post, index) => (
+          {projects.map((project, index) => (
             <Column key={index}>
               <Card>
-                <Image imageSrc={post.imageSrc} />
+                <Image imageSrc={project.imageSrc} />
                 <Details>
                   <MetaContainer>
-                    <Meta>
-                      <div>{post.author}</div>
-                    </Meta>
-                    <Meta>
-                      <div>{post.category}</div>
-                    </Meta>
+                    {project.technologies.map((technology) => (
+                      <Meta>
+                        <div>{technology}</div>
+                      </Meta>
+                    ))}
                   </MetaContainer>
-                  <Title>{post.title}</Title>
-                  <Description>{post.description}</Description>
-                  <Link href={post.url}>Read Post</Link>
+                  <Title>{project.title}</Title>
+                  <Description>{project.description}</Description>
+                  <Link href={project.url}>View Code</Link>
                 </Details>
               </Card>
             </Column>
