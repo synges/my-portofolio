@@ -4,6 +4,7 @@ import { ReactComponent as ArrowUpIcon } from 'images/arrow-up-2-icon.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import tw from 'twin.macro'
 import styled from 'styled-components'
+import { Spring, animated } from 'react-spring'
 
 const BackToTopArrow = tw(AnchorLink)`
     text-secondary-500 transform p-2 border-secondary-500 border-4 rounded-full hover:border-primary-500 hover:text-primary-500 duration-300 hover:scale-125 
@@ -32,8 +33,21 @@ const BackToTopButton = () => {
       </BackToTopArrow>
     </BackToTopButtonContainer>
   )
+
   if (!visible) return null
-  return <UpArrow />
+  return (
+    <Spring
+      from={{ opacity: 0 }}
+      to={{ opacity: 1 }}
+      config={{ duration: 900 }}
+    >
+      {(props) => (
+        <animated.div style={props}>
+          <UpArrow />
+        </animated.div>
+      )}
+    </Spring>
+  )
 }
 
 export default BackToTopButton
