@@ -6,7 +6,7 @@ import tw from 'twin.macro'
 import styled from 'styled-components'
 
 const BackToTopArrow = tw(AnchorLink)`
-    text-secondary-500 animate-bounce transform p-2 border-secondary-500 border rounded-full hover:border-primary-500 hover:text-primary-500  focus:outline-none transition duration-300 transform hover:scale-125 transform -translate-y-2/3 md:translate-y-0
+    text-secondary-500 transform p-2 border-secondary-500 border-4 rounded-full hover:border-primary-500 hover:text-primary-500 duration-300 hover:scale-125 
 `
 
 const BackToTopButtonContainer = styled.div`
@@ -28,7 +28,7 @@ const BackToTopButton = () => {
   const UpArrow = () => (
     <BackToTopButtonContainer>
       <BackToTopArrow href="#header">
-        <ArrowUpIcon tw="w-10 " />
+        <ArrowUpIcon tw="w-10 animate-bounce" />
       </BackToTopArrow>
     </BackToTopButtonContainer>
   )
