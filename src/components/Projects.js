@@ -38,10 +38,10 @@ const Link = styled(PrimaryButtonBase).attrs({ as: 'a' })`
 
 const DecoratorBlob1 = tw(
   SvgDecoratorBlob1
-)`-z-10 absolute bottom-0 right-0 w-48 h-48 transform translate-x-40 -translate-y-8 opacity-25`
+)`z-0 absolute bottom-0 right-0 w-48 h-48 transform translate-x-40 -translate-y-8 opacity-25`
 const DecoratorBlob2 = tw(
   SvgDecoratorBlob2
-)`-z-10 absolute top-0 left-0 w-48 h-48 transform -translate-x-32 translate-y-full opacity-25`
+)`z-0 absolute top-0 left-0 w-48 h-48 transform -translate-x-32 translate-y-full opacity-25`
 
 const Projects = ({
   heading = (
@@ -49,16 +49,16 @@ const Projects = ({
       Personal <span tw="text-primary-500">Projects</span>
     </>
   ),
-  description = 'Some amazing blog posts that are written by even more amazing people.',
+  description = 'Personal Projects created for fun and educational purposes',
 }) => {
   const projects = [
     {
-      imageSrc: 'https://i.postimg.cc/PJzdQSzG/python.png',
-      technologies: ['Python', 'Flask', 'MySQL'],
-      title: 'Optimizing your website for your main keyword',
+      imageSrc: 'https://i.postimg.cc/6qFc0Nwq/blog.jpg',
+      technologies: ['React', 'Redux', 'Node.js', 'MongoDB'],
+      title: 'Bloglist Website with User Authentication',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      url: 'https://reddit.com',
+      url: 'https://github.com/synges/BlogList',
     },
     {
       imageSrc:
@@ -67,7 +67,7 @@ const Projects = ({
       title: 'Mobile Application for RiverOak Skating Trails',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      url: 'https://timerse.com',
+      url: 'https://expo.io/@riveroakapp21/RiverOak',
     },
     {
       imageSrc: 'https://i.postimg.cc/PJzdQSzG/python.png',
@@ -92,8 +92,8 @@ const Projects = ({
                 <Image imageSrc={project.imageSrc} />
                 <Details>
                   <MetaContainer>
-                    {project.technologies.map((technology) => (
-                      <Meta>
+                    {project.technologies.map((technology, i) => (
+                      <Meta key={i}>
                         <div>{technology}</div>
                       </Meta>
                     ))}

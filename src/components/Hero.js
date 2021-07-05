@@ -25,10 +25,10 @@ const Description = tw(
 )`mt-4 lg:text-base text-secondary-500 max-w-lg`
 const PrimaryButton = tw(
   AnchorLink
-)`mt-8 inline-block w-56 tracking-wide text-center py-5 rounded-full px-8 py-3 font-bold bg-primary-500 text-gray-100 hocus:bg-primary-900 hocus:text-gray-200 focus:shadow-outline focus:outline-none transition duration-300`
+)`mt-8 inline-block w-56 tracking-wide text-center py-5 rounded-full px-8 py-3 font-bold bg-primary-500 text-gray-100 hocus:bg-primary-900 hocus:text-gray-200  focus:outline-none transition duration-300`
 const ImageColumn = tw(Column)`ml-auto lg:mr-0 relative mt-16 lg:mt-0 lg:ml-32`
-const ImageContainer = tw.div`relative z-40 transform xl:-translate-x-24 xl:-translate-y-16`
-const Image = tw.img`max-w-full w-96 rounded-t sm:rounded relative z-20`
+const ImageContainer = tw.div`relative z-30 transform xl:-translate-x-24 xl:-translate-y-16`
+const Image = tw.img`max-w-full w-96 rounded-t sm:rounded relative z-20 `
 const Offsetbackground = tw.div`absolute inset-0 bg-gray-300 rounded xl:-mb-8`
 const ImageDecoratorBlob = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none z-10 absolute right-0 bottom-0 transform translate-x-10 translate-y-10 h-32 w-32 opacity-25 text-gray-900 fill-current`}

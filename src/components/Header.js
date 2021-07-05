@@ -29,7 +29,7 @@ const PrimaryLink = tw.a`
   lg:mx-0  text-lg my-2 lg:text-sm  lg:my-0
   font-semibold tracking-wide transition duration-300
   px-8 py-3 rounded bg-primary-500 text-gray-100
-  hocus:bg-primary-900 hocus:text-gray-200 focus:shadow-outline
+  hocus:bg-primary-900 hocus:text-gray-200 
   border-b-0 rounded-full whitespace-nowrap
 `
 
@@ -43,11 +43,11 @@ const LogoLink = styled(NavLink)`
 
 const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between lg:hidden`
 const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
+  lg:hidden z-50 focus:outline-none hocus:text-primary-500 transition duration-300
 `
 
 const MobileNavLinks = motion(styled.div`
-  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white lg:hidden`}
+  ${tw`lg:hidden z-40 absolute top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white lg:hidden`}
   ${NavLinks} {
     ${tw`flex flex-col items-center`}
   }

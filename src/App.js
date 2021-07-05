@@ -9,19 +9,23 @@ import Work from 'components/Work'
 import Skills from 'components/Skills'
 import Projects from 'components/Projects'
 import Education from 'components/Education'
+import BackToTopButton from 'components/BackToTopButton'
 
 const App = () => {
   return (
-    <PageAnimation>
-      <Header />
-      <Hero />
-      <Skills />
-      <Work />
-      <Projects />
-      <Education />
-      <ContactMe />
-      <Footer />
-    </PageAnimation>
+    <>
+      <PageAnimation>
+        <Header />
+        <Hero />
+        <Skills />
+        <Work />
+        <Projects />
+        <Education />
+        <ContactMe />
+        <Footer />
+      </PageAnimation>
+      <BackToTopButton />
+    </>
   )
 }
 

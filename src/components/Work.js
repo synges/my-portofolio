@@ -19,7 +19,7 @@ const Card = styled.div((props) => [
 ])
 const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
-  tw`rounded md:w-1/2 lg:w-5/12 xl:w-1/3 flex-shrink-0 h-80 md:h-144 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`,
+  tw`rounded md:w-1/2 lg:w-5/12 xl:w-1/3 flex-shrink-0 h-72 md:h-80 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8 bg-contain bg-no-repeat`,
 ])
 const Details = tw.div`mt-4 md:mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`
 const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`
@@ -29,16 +29,16 @@ const Link = tw.a`inline-block mt-4 text-sm text-primary-500 font-bold cursor-po
 
 const SvgDotPattern1 = tw(
   SvgDotPatternIcon
-)`absolute top-0 left-0 transform -translate-x-20 rotate-90 translate-y-8 -z-10 opacity-25 text-primary-500 fill-current w-24`
+)`absolute top-0 left-0 transform -translate-x-20 rotate-90 translate-y-8 z-0 opacity-25 text-primary-500 fill-current w-24`
 const SvgDotPattern2 = tw(
   SvgDotPatternIcon
-)`absolute top-0 right-0 transform translate-x-20 rotate-45 translate-y-24 -z-10 opacity-25 text-primary-500 fill-current w-24`
+)`absolute top-0 right-0 transform translate-x-20 rotate-45 translate-y-24 z-0 opacity-25 text-primary-500 fill-current w-24`
 const SvgDotPattern3 = tw(
   SvgDotPatternIcon
-)`absolute bottom-0 left-0 transform -translate-x-20 rotate-45 -translate-y-8 -z-10 opacity-25 text-primary-500 fill-current w-24`
+)`absolute bottom-0 left-0 transform -translate-x-20 rotate-45 -translate-y-8 z-0 opacity-25 text-primary-500 fill-current w-24`
 const SvgDotPattern4 = tw(
   SvgDotPatternIcon
-)`absolute bottom-0 right-0 transform translate-x-20 rotate-90 -translate-y-24 -z-10 opacity-25 text-primary-500 fill-current w-24`
+)`absolute bottom-0 right-0 transform translate-x-20 rotate-90 -translate-y-24 z-0 opacity-25 text-primary-500 fill-current w-24`
 
 const Work = ({
   heading = (
@@ -46,37 +46,34 @@ const Work = ({
       <span tw="text-primary-500">Work</span> Experience
     </>
   ),
-  description = 'here is where I worked beforeeeeeeeee',
+  description = 'Past professional work expereince and contracts',
 }) => {
   const cards = [
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1550699026-4114bbf4fb49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80',
-      subtitle: 'Paid',
-      title: 'Loachella, NYC',
+      imageSrc: 'https://i.postimg.cc/zBCmcxM7/MNP.png',
+      subtitle: 'Sep 2020 - Dec 2020',
+      title: 'MNP LLP',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      url: 'https://timerse.com',
+      url: 'https://www.mnp.ca/',
     },
 
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1543423924-b9f161af87e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
-      subtitle: 'Free',
-      title: 'Rock In Rio, Upstate',
+      imageSrc: 'https://i.postimg.cc/fRzrzwPx/Westboro.png',
+      subtitle: 'Jun 2020 - Sep 2020',
+      title: 'Westboro Photonics',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      url: 'https://timerse.com',
+      url: 'https://wphotonics.com/',
     },
 
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80',
-      subtitle: 'Exclusive',
-      title: 'Lollapalooza, Manhattan',
+      imageSrc: 'https://i.postimg.cc/NjmWMJGc/acia-blogue-1.jpg',
+      subtitle: 'Feb 2020 - May 2020',
+      title: 'Canadian Food Inspection Agency',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      url: 'https://timerse.com',
+      url: 'https://inspection.canada.ca/eng/1297964599443/1297965645317',
     },
   ]
   return (
@@ -95,7 +92,7 @@ const Work = ({
                 <Subtitle>{card.subtitle}</Subtitle>
                 <Title>{card.title}</Title>
                 <Description>{card.description}</Description>
-                <Link href={card.url}>See Event Details</Link>
+                <Link href={card.url}>Visit Website</Link>
               </Details>
             </Card>
           ))}

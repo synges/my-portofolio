@@ -2,7 +2,6 @@ import React from 'react'
 import Slider from 'react-slick'
 import styled from 'styled-components'
 import tw from 'twin.macro'
-import { css } from 'styled-components/macro' //eslint-disable-line
 import { SectionHeading as HeadingTitle } from 'components/misc/Headings.js'
 import { ReactComponent as ArrowLeftIcon } from 'images/arrow-left-2-icon.svg'
 import { ReactComponent as ArrowRightIcon } from 'images/arrow-right-2-icon.svg'
@@ -58,10 +57,10 @@ const PreviousArrow = ({ currentSlide, slideCount, ...props }) => (
 
 const DecoratorBlob1 = tw(
   SvgDecoratorBlob1
-)`absolute w-32 top-0 left-0 -z-10 text-primary-500 opacity-25 transform -translate-x-full`
+)`absolute w-32 top-0 left-0 z-0 text-primary-500 opacity-30 transform -translate-x-full`
 const DecoratorBlob2 = tw(
   SvgDecoratorBlob2
-)`absolute w-32 bottom-0 right-0 -z-10 text-pink-500 opacity-15 transform translate-x-2/3 translate-y-8`
+)`absolute w-32 bottom-0 right-0 z-0 text-pink-500 opacity-20 transform translate-x-2/3 translate-y-8`
 
 const Education = ({
   heading = (
