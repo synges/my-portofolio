@@ -4,7 +4,6 @@ import tw from 'twin.macro'
 import styled from 'styled-components'
 import { useAnimation, useCycle } from 'framer-motion'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-
 import logo from '../images/logo.svg'
 import { ReactComponent as MenuIcon } from 'feather-icons/dist/icons/menu.svg'
 import { ReactComponent as CloseIcon } from 'feather-icons/dist/icons/x.svg'
@@ -16,9 +15,6 @@ const Container = tw.header`
 
 const NavLinks = tw.div`inline-block`
 
-/* hocus: stands for "on hover or focus"
- * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
- */
 const NavLink = tw(AnchorLink)`
   text-lg my-2  lg:text-base  lg:my-0 lg:mx-12
   font-semibold tracking-wide transition duration-300 text-secondary-500

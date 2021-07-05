@@ -1,11 +1,6 @@
 import React from 'react'
 import tw from 'twin.macro'
 import styled from 'styled-components'
-import {
-  SectionHeading,
-  Subheading as SubheadingBase,
-} from 'components/misc/Headings.js'
-import { PrimaryButton as PrimaryButtonBase } from 'components/misc/Buttons.js'
 import EmailIllustrationSrc from 'images/email-illustration.svg'
 import emailjs from 'emailjs-com'
 
@@ -19,6 +14,7 @@ const TextColumn = styled(Column)((props) => [
     ? tw`md:mr-12 lg:mr-16 md:order-first`
     : tw`md:ml-12 lg:ml-16 md:order-last`,
 ])
+const SectionHeading = tw.h2`text-4xl sm:text-5xl font-black tracking-wide text-center`
 
 const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
@@ -26,7 +22,7 @@ const Image = styled.div((props) => [
 ])
 const TextContent = tw.div`lg:py-8 text-center md:text-left`
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left`
+const Subheading = tw.h5`font-bold text-primary-500 text-center md:text-left`
 const Heading = tw(
   SectionHeading
 )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`
@@ -38,7 +34,7 @@ const Textarea = styled(Input).attrs({ as: 'textarea' })`
   ${tw`h-24`}
 `
 
-const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
+const SubmitButton = tw.button`px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-900 hocus:text-gray-200  focus:outline-none transition duration-300 inline-block mt-8`
 
 const ContactMe = ({
   subheading = 'Contact Me',

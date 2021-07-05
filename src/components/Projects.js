@@ -1,13 +1,11 @@
 import React from 'react'
 import tw from 'twin.macro'
 import styled from 'styled-components'
-import { css } from 'styled-components/macro' //eslint-disable-line
-import { SectionHeading as HeadingTitle } from 'components/misc/Headings.js'
-import { PrimaryButton as PrimaryButtonBase } from 'components/misc/Buttons.js'
 import { ReactComponent as SvgDecoratorBlob1 } from 'images/svg-decorator-blob-1.svg'
 import { ReactComponent as SvgDecoratorBlob2 } from 'images/svg-decorator-blob-3.svg'
 
 const Container = tw.div`relative`
+const HeadingTitle = tw.h2`text-4xl sm:text-5xl font-black tracking-wide text-center`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
 const ThreeColumn = tw.div`flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap`
 const Column = tw.div`mt-24 lg:w-1/3`
@@ -32,6 +30,7 @@ const Meta = styled.div`
 
 const Title = tw.h5`mt-4 leading-snug font-bold text-lg`
 const Description = tw.p`mt-2 text-sm text-secondary-100`
+const PrimaryButtonBase = tw.button`px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-900 hocus:text-gray-200  focus:outline-none transition duration-300`
 const Link = styled(PrimaryButtonBase).attrs({ as: 'a' })`
   ${tw`inline-block mt-4 text-sm font-semibold`}
 `

@@ -2,7 +2,6 @@ import React from 'react'
 import Slider from 'react-slick'
 import styled from 'styled-components'
 import tw from 'twin.macro'
-import { SectionHeading as HeadingTitle } from 'components/misc/Headings.js'
 import { ReactComponent as ArrowLeftIcon } from 'images/arrow-left-2-icon.svg'
 import { ReactComponent as ArrowRightIcon } from 'images/arrow-right-2-icon.svg'
 import { ReactComponent as SvgDecoratorBlob1 } from 'images/svg-decorator-blob-4.svg'
@@ -13,6 +12,7 @@ import 'slick-carousel/slick/slick.css'
 const Container = tw.div`relative`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
 const HeadingInfoContainer = tw.div`flex flex-col items-center`
+const HeadingTitle = tw.h2`text-4xl sm:text-5xl font-black tracking-wide text-center`
 
 const CollegeSliderContainer = tw.div`mt-24`
 const CollgeSlider = styled(Slider)``

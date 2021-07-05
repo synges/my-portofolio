@@ -1,16 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
-//eslint-disable-next-line
-import { css } from 'styled-components/macro'
-import { SectionHeading } from 'components/misc/Headings.js'
-import { SectionDescription } from 'components/misc/Typography.js'
 
 import defaultCardImage from 'images/shield-icon.svg'
 
 import { ReactComponent as SvgDecoratorBlob3 } from 'images/svg-decorator-blob-3.svg'
 
 const Container = tw.div`relative`
+const SectionHeading = tw.h2`text-4xl sm:text-5xl font-black tracking-wide text-center`
+const SectionDescription = tw.p`mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl`
 
 const ThreeColumnContainer = styled.div`
   ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-20 md:py-24`}

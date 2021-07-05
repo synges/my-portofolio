@@ -1,14 +1,13 @@
 import React from 'react'
 import tw from 'twin.macro'
 import styled from 'styled-components'
-import { Container as ContainerBase } from 'components/misc/Layouts.js'
 import logo from 'images/logo.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { ReactComponent as LinkedInIcon } from 'images/linkedin-icon.svg'
 import { ReactComponent as GitHubIcon } from 'images/github-icon.svg'
 import { ReactComponent as EmailIcon } from 'images/email-newsletter-icon.svg'
 
-const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-8`
+const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
 
 const Row = tw.div`flex items-center justify-center flex-col px-8`
@@ -42,7 +41,6 @@ const Footer = () => {
             <LogoText>Ahmed Aziz</LogoText>
           </LogoContainer>
           <LinksContainer>
-            <Link href="#header">Home</Link>
             <Link href="#skills">Skills</Link>
             <Link href="#work">Work</Link>
             <Link href="#projects">Projects</Link>
