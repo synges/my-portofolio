@@ -6,7 +6,7 @@ import { ReactComponent as SvgDotPatternIcon } from 'images/dot-pattern.svg'
 const Container = tw.div`relative`
 
 const HeadingTitle = tw.h2`text-4xl sm:text-5xl font-black tracking-wide text-center`
-const SingleColumn = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
+const SingleColumn = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`
 
 const HeadingInfoContainer = tw.div`flex flex-col items-center`
 const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-center max-w-sm`

@@ -4,7 +4,7 @@ import { ReactComponent as ArrowUpIcon } from 'images/arrow-up-2-icon.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import tw from 'twin.macro'
 import styled from 'styled-components'
-import { Spring, animated } from 'react-spring'
+import { Transition, animated } from 'react-spring'
 
 const BackToTopArrow = tw(AnchorLink)`
     text-secondary-500 transform p-2 border-secondary-500 border-4 rounded-full hover:border-primary-500 hover:text-primary-500 duration-300 hover:scale-125 
@@ -16,13 +16,13 @@ const BackToTopButtonContainer = styled.div`
 
 const BackToTopButton = () => {
   const { y: pageYOffset } = useWindowScroll()
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState([])
 
   useEffect(() => {
     if (pageYOffset > 100) {
-      setVisible(true)
+      setVisible([{}])
     } else {
-      setVisible(false)
+      setVisible([])
     }
   }, [pageYOffset])
 
@@ -34,19 +34,19 @@ const BackToTopButton = () => {
     </BackToTopButtonContainer>
   )
 
-  if (!visible) return null
   return (
-    <Spring
+    <Transition
+      items={visible}
       from={{ opacity: 0 }}
-      to={{ opacity: 1 }}
-      config={{ duration: 900 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
     >
       {(props) => (
         <animated.div style={props}>
           <UpArrow />
         </animated.div>
       )}
-    </Spring>
+    </Transition>
   )
 }
 

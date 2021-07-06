@@ -9,7 +9,7 @@ import { ReactComponent as GitHubIcon } from 'images/github-icon.svg'
 import { ReactComponent as EmailIcon } from 'images/email-newsletter-icon.svg'
 
 const Container = tw.div`relative`
-const ContentWithVerticalPadding = tw.div`py-20 lg:py-24`
+const ContentWithVerticalPadding = tw.div`py-10 lg:py-14`
 const SectionHeading = tw.h2`text-4xl sm:text-5xl font-black tracking-wide text-center`
 const SectionDescription = tw.p`mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl`
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`

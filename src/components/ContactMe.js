@@ -5,7 +5,7 @@ import EmailIllustrationSrc from 'images/email-illustration.svg'
 import emailjs from 'emailjs-com'
 
 const Container = tw.div`relative`
-const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`
+const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-16 md:py-20`
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`
 const ImageColumn = tw(Column)`md:w-5/12 flex-shrink-0 h-80 md:h-auto`
 const TextColumn = styled(Column)((props) => [

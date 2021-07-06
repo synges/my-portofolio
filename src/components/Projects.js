@@ -6,7 +6,7 @@ import { ReactComponent as SvgDecoratorBlob2 } from 'images/svg-decorator-blob-3
 
 const Container = tw.div`relative`
 const HeadingTitle = tw.h2`text-4xl sm:text-5xl font-black tracking-wide text-center`
-const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
+const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`
 const ThreeColumn = tw.div`flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap`
 const Column = tw.div`mt-24 lg:w-1/3`
 
