@@ -1,6 +1,6 @@
 import { keyframes } from 'styled-components'
 import { useState, useRef, useEffect } from 'react'
-import { styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 
 const moveLeft = keyframes`
   from {
@@ -51,6 +51,9 @@ const MarqueeItem = styled.div`
   position: relative;
   display: inline-block;
   margin-right: 2rem;
+  img {
+    ${tw`w-10 h-full mr-4 text-primary-500`}
+  }
 `
 
 const getFillList = (list, copyTimes = 1) => {
@@ -89,7 +92,11 @@ const Marquee = ({ list, time, rightToLeft, ...props }) => {
         rightToLeft={rightToLeft}
       >
         {showList.map((item, key) => {
-          return <MarqueeItem key={key}>{item}</MarqueeItem>
+          return (
+            <MarqueeItem key={key}>
+              <img src={item} alt={item} />
+            </MarqueeItem>
+          )
         })}
       </MarqueeArea>
     </MarqueeContainer>
