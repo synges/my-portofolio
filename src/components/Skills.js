@@ -8,9 +8,42 @@ const Description = tw.p`my-4 text-sm md:text-base lg:text-lg font-medium leadin
 
 const VerticalSpacer = tw.div`mt-10 w-full`
 
-const DATA_LIST = ['hassan abo ali', 'mohamed ahmed', 'abo treka gamed']
+const DATA_LIST = [
+  'react',
+  'javascript',
+  'typescript',
+  'nodejs',
+  'express',
+  'java',
+  'redux',
+  'jquery',
+  'jest',
+  'angular',
+  'html',
+  'sass',
+  'tailwindcss',
+  'hibernate',
+  'git',
+]
 
-const DATA_LIST2 = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+const DATA_LIST2 = [
+  'python',
+  'flask',
+  'nestjs',
+  'mongo',
+  'firebase',
+  'netlify',
+  'auth0',
+  'graphql',
+  'mysql',
+  'heroku',
+  'sqlite',
+  'socketio',
+  'webpack',
+  'oracle',
+  'bootstrap',
+  'android',
+]
 
 const Skills = ({ proficient = [], exposure = [] }) => {
   return (
