@@ -38,8 +38,10 @@ const MarqueeContainer = styled.div`
 `
 
 const MarqueeArea = styled.div`
-  display: inline-block;
-  white-space: nowrap;
+  ${tw`
+  inline-block
+  whitespace-nowrap
+  `}
   transform: translateX(
     ${(props) => !props.rightToLeft && '-'}${(props) => props.move}px
   );
@@ -52,7 +54,7 @@ const MarqueeItem = styled.div`
   display: inline-block;
   margin-right: 2rem;
   img {
-    ${tw`w-10 h-full mr-4 text-primary-500`}
+    ${tw`w-20 h-full mr-4 text-primary-500`}
   }
 `
 

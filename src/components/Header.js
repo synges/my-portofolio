@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import styled from 'styled-components'
 import { useAnimation, useCycle } from 'framer-motion'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import logo from 'logos/redux.svg'
+import logo from 'images/logo.svg'
 import { ReactComponent as MenuIcon } from 'feather-icons/dist/icons/menu.svg'
 import { ReactComponent as CloseIcon } from 'feather-icons/dist/icons/x.svg'
 

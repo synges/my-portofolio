@@ -39,10 +39,10 @@ const Description = tw.p`my-4 text-sm md:text-base lg:text-lg font-medium leadin
 
 const VerticalSpacer = tw.div`mt-10 w-full`
 
-const DATA_LIST = [
+const PROFICIENT = [
   reactLogo,
-  // javascript,
-  // typescript,
+  javascript,
+  typescript,
   nodejs,
   express,
   java,
@@ -57,7 +57,7 @@ const DATA_LIST = [
   git,
 ]
 
-const DATA_LIST2 = [
+const EXPOSURE = [
   python,
   flask,
   nestjs,
@@ -76,7 +76,7 @@ const DATA_LIST2 = [
   android,
 ]
 
-const Skills = ({ proficient = [], exposure = [] }) => {
+const Skills = () => {
   return (
     <Container id="skills">
       <Heading>
@@ -86,12 +86,12 @@ const Skills = ({ proficient = [], exposure = [] }) => {
       <Description>
         These are some of the languages and technologies I used
       </Description>
-      <Marquee list={DATA_LIST} time={9} rightToLeft={false} />
+      <Marquee list={PROFICIENT} time={9} rightToLeft={false} />
       <VerticalSpacer />
       <Description>
         These are some of the languages and technologies I used
       </Description>
-      <Marquee list={DATA_LIST2} time={9} rightToLeft={true} />
+      <Marquee list={EXPOSURE} time={9} rightToLeft={true} />
     </Container>
   )
 }
