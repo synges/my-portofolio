@@ -33,7 +33,7 @@ import oracle from 'logos/oracle.svg'
 import bootstrap from 'logos/bootstrap.svg'
 import android from 'logos/android.svg'
 
-const Container = tw.div`relative flex flex-col items-center justify-center max-w-screen-lg mx-auto py-16 md:py-20`
+const Container = tw.div`relative flex flex-col items-center justify-center max-w-screen-lg mx-auto py-20 md:py-24`
 const Heading = tw.h2`text-4xl sm:text-5xl font-black tracking-wide text-center w-full`
 const Description = tw.p`my-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl w-full text-center`
 
@@ -42,25 +42,24 @@ const VerticalSpacer = tw.div`mt-10 w-full`
 const PROFICIENT = [
   reactLogo,
   javascript,
-  typescript,
-  nodejs,
-  express,
   java,
   redux,
   jquery,
   jest,
   angular,
+  nodejs,
   html,
+  typescript,
   sass,
   tailwindcss,
   hibernate,
   git,
+  express,
 ]
 
 const EXPOSURE = [
   python,
   flask,
-  nestjs,
   mongo,
   firebase,
   netlify,
@@ -72,6 +71,7 @@ const EXPOSURE = [
   socketio,
   webpack,
   oracle,
+  nestjs,
   bootstrap,
   android,
 ]

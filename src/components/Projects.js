@@ -60,8 +60,7 @@ const Projects = ({
       url: 'https://github.com/synges/BlogList',
     },
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1479660095429-2cf4e1360472?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80',
+      imageSrc: 'https://i.postimg.cc/xdtdqNN3/riveroak.png',
       technologies: ['React Native', 'React', 'FireStore'],
       title: 'Mobile Application for RiverOak Skating Trails',
       description:

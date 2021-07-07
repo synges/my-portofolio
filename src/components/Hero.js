@@ -8,8 +8,7 @@ import { ReactComponent as LinkedInIcon } from 'images/linkedin-icon.svg'
 import { ReactComponent as GitHubIcon } from 'images/github-icon.svg'
 import { ReactComponent as EmailIcon } from 'images/email-newsletter-icon.svg'
 
-const Container = tw.div`relative`
-const ContentWithVerticalPadding = tw.div`py-10 lg:py-14`
+const Container = tw.div`relative py-14 lg:py-20`
 const SectionHeading = tw.h2`text-4xl sm:text-5xl font-black tracking-wide text-center`
 const SectionDescription = tw.p`mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl`
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`
@@ -39,7 +38,7 @@ const Quote = tw.blockquote``
 
 const SocialLinksContainer = tw.div`mt-8`
 const SocialLink = styled.a`
-  ${tw`cursor-pointer inline-block text-primary-500 hover:text-primary-900 transition duration-300 mx-4`}
+  ${tw`cursor-pointer inline-block text-primary-500 hover:text-primary-900 transition duration-300 mx-4 transform  hover:scale-125`}
   svg {
     ${tw`w-10 h-10`}
   }
@@ -53,43 +52,39 @@ const Hero = ({
   testimonial = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 }) => {
   return (
-    <>
-      <Container>
-        <ContentWithVerticalPadding>
-          <Row>
-            <TextColumn>
-              <Heading>{heading}</Heading>
-              <Description>{description}</Description>
-              <PrimaryButton href={primaryButtonUrl}>
-                {primaryButtonText}
-              </PrimaryButton>
-              <SocialLinksContainer>
-                <SocialLink href="https://www.linkedin.com/in/ahmedaziz23/">
-                  <LinkedInIcon />
-                </SocialLink>
-                <SocialLink href="https://github.com/synges">
-                  <GitHubIcon />
-                </SocialLink>
-                <SocialLink href="mailto:ahmedshawky23@gmail.com">
-                  <EmailIcon />
-                </SocialLink>
-              </SocialLinksContainer>
-            </TextColumn>
-            <ImageColumn>
-              <ImageContainer>
-                <Image src={imageSrc} />
-                <ImageDecoratorBlob />
-                <Testimonial>
-                  <QuotesLeftIcon />
-                  <Quote>{testimonial}</Quote>
-                </Testimonial>
-              </ImageContainer>
-              <Offsetbackground />
-            </ImageColumn>
-          </Row>
-        </ContentWithVerticalPadding>
-      </Container>
-    </>
+    <Container>
+      <Row>
+        <TextColumn>
+          <Heading>{heading}</Heading>
+          <Description>{description}</Description>
+          <PrimaryButton href={primaryButtonUrl}>
+            {primaryButtonText}
+          </PrimaryButton>
+          <SocialLinksContainer>
+            <SocialLink href="https://www.linkedin.com/in/ahmedaziz23/">
+              <LinkedInIcon />
+            </SocialLink>
+            <SocialLink href="https://github.com/synges">
+              <GitHubIcon />
+            </SocialLink>
+            <SocialLink href="mailto:ahmedshawky23@gmail.com">
+              <EmailIcon />
+            </SocialLink>
+          </SocialLinksContainer>
+        </TextColumn>
+        <ImageColumn>
+          <ImageContainer>
+            <Image src={imageSrc} />
+            <ImageDecoratorBlob />
+            <Testimonial>
+              <QuotesLeftIcon />
+              <Quote>{testimonial}</Quote>
+            </Testimonial>
+          </ImageContainer>
+          <Offsetbackground />
+        </ImageColumn>
+      </Row>
+    </Container>
   )
 }
 
