@@ -11,7 +11,7 @@ const BackToTopArrow = tw(AnchorLink)`
 `
 
 const BackToTopButtonContainer = styled.div`
-  ${tw`fixed lg:bottom-14 lg:right-10 h-full flex items-end z-50`}
+  ${tw`fixed lg:bottom-14 lg:right-16 h-full flex items-end z-50`}
 `
 
 const BackToTopButton = () => {
