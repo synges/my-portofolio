@@ -33,7 +33,7 @@ import oracle from 'logos/oracle.svg'
 import bootstrap from 'logos/bootstrap.svg'
 import android from 'logos/android.svg'
 
-const Container = tw.div`relative flex flex-col items-center justify-center max-w-screen-lg mx-auto py-20 md:py-24`
+const Container = tw.div`relative flex flex-col items-center justify-center max-w-screen-lg mx-auto py-20 md:py-28`
 const Heading = tw.h2`text-4xl sm:text-5xl font-black tracking-wide text-center w-full`
 const Description = tw.p`my-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl w-full text-center`
 
