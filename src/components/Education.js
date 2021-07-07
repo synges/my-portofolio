@@ -76,8 +76,8 @@ const Education = ({
   const courses = [
     {
       imageSrc: 'https://i.postimg.cc/tTwPW4RZ/Algonquin.jpg',
-      description: `A 2 year Ontario college diploma in Computer Programming from Algonquin College.
-      Graduated with honours and co-op distinguishment with a cumulative GPA of 3.96/4`,
+      description:
+        "Graduated with honours and co-op distinction (GPA: 3.96) from Algonquin College's college diploma in Computer Programming (2 year).",
       collegeName: 'Algonquin College',
       courseDate: 'May 2021',
     },

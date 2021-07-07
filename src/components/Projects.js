@@ -48,7 +48,7 @@ const Projects = ({
       Personal <span tw="text-primary-500">Projects</span>
     </>
   ),
-  description = 'Projects I enjoyed to create utilizing technologies I was intrested in',
+  description = 'Projects I enjoyed to create utilizing technologies I am interested in',
 }) => {
   const projects = [
     {
@@ -56,7 +56,7 @@ const Projects = ({
       technologies: ['React', 'Redux', 'Node.js', 'MongoDB'],
       title: 'Bloglist Website with User Authentication',
       description:
-        'Developing a simple blog list web application utilizing Redux with React for global state management. Node.js with Express was used for building RESTful APIs to serve the application. MongoDB was used as the database of choice.',
+        'Developing a simple blog list web application using Redux with React for global state management. Node.js with Express was used for building RESTful APIs to serve the application. Using MongoDB as the database of choice.',
       url: 'https://github.com/synges/BlogList',
     },
     {
@@ -64,7 +64,7 @@ const Projects = ({
       technologies: ['React Native', 'React', 'FireStore'],
       title: 'Mobile Application for RiverOak Skating Trails',
       description:
-        'Created a Mobile application for the Riveroak Skating trails located south of Ottawa. The mobile app lets customers check for ice condtions of winter trails, as well as, find useful information events and other activities been held there. The app was developed using React native and Firestore, in addition to a React web app for the admin.',
+        'Created a Mobile application for the Riveroak Skating trails located south of Ottawa. The mobile app lets customers check for ice condtions of winter trails, as well as find useful information events and other activities been held there. The app was developed using React native and Firestore, in addition to a React web app for the admin.',
       url: 'https://expo.io/@riveroakapp21/RiverOak',
     },
     {

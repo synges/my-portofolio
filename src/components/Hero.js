@@ -45,11 +45,11 @@ const SocialLink = styled.a`
 `
 const Hero = ({
   heading = 'Full Stack Web Developer',
-  description = 'Experience with Popular Frontend frameworks like React and Angular, as well as, Backend langugaes like Node.js and Java. Additionally, developed mobile apps in Android and React Native and experimented with Flask and Python',
+  description = 'Experience with Popular Frontend frameworks like React and Angular as well as Backend languages like Node.js and Java. Additionally, developed mobile apps in Android and React Native, and experimented with Flask and Python',
   imageSrc = 'https://i.postimg.cc/WzbjNG0s/Ahmed-Picture.jpg',
   primaryButtonUrl = '#contact',
   primaryButtonText = 'Contact Me',
-  testimonial = 'Hi, my name is Ahmed Aziz and I am a Full Stack Developer with a background in Mechanical Engineering. I always had a passion for Software Development and Tech well before getting into the field.',
+  testimonial = 'Hi, my name is Ahmed Aziz and I am a Full Stack Developer with a background in Mechanical Engineering. My passion for Software Development and Tech stemmed from my love of challanges and problem solving.',
 }) => {
   return (
     <Container>

@@ -45,7 +45,7 @@ const ContactMe = ({
       Feel free to <span tw="text-primary-500">get in touch</span>
     </>
   ),
-  description = 'I am always open for new oportunities and challenges, you can contact me using this form or threw my email address.',
+  description = 'I am always open to new oportunities and challenges, you can contact me using this form or by emailing me at: ahmedshawky23@gmail.com',
   submitButtonText = 'Send',
   textOnLeft = true,
 }) => {

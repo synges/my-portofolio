@@ -87,7 +87,7 @@ const Skills = () => {
       <Marquee list={PROFICIENT} time={9} rightToLeft={false} />
       <VerticalSpacer />
       <Description>
-        Technologies that I had exposure to or minimal expereince with
+        Technologies I have exposure and basic experience with
       </Description>
       <Marquee list={EXPOSURE} time={9} rightToLeft={true} />
     </Container>
