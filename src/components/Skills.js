@@ -83,13 +83,11 @@ const Skills = () => {
         Languages & <span tw="text-primary-500">Skills</span>
       </Heading>
       <VerticalSpacer />
-      <Description>
-        These are some of the languages and technologies I used
-      </Description>
+      <Description>Languages and Frameworks I feel confident in</Description>
       <Marquee list={PROFICIENT} time={9} rightToLeft={false} />
       <VerticalSpacer />
       <Description>
-        These are some of the languages and technologies I used
+        Technologies that I had exposure to or minimal expereince with
       </Description>
       <Marquee list={EXPOSURE} time={9} rightToLeft={true} />
     </Container>

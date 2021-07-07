@@ -46,7 +46,7 @@ const Work = ({
       <span tw="text-primary-500">Work</span> Experience
     </>
   ),
-  description = 'Past professional work expereince and contracts',
+  description = 'Past professional work expereince and co-op placements.',
 }) => {
   const cards = [
     {
@@ -54,7 +54,7 @@ const Work = ({
       subtitle: 'Sep 2020 - Dec 2020',
       title: 'MNP LLP',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'Worked withing a dynamic team on the mnp.ca website redesign project. Developed responsive frontend components utilizing Sass as a css preprocessor and the jQuery library for functionality. Additionally, colaborated on a project for the city of Ottawa to model a new MySQL database to Java objects utilizing Hibernate.',
       url: 'https://www.mnp.ca/',
     },
 
@@ -63,7 +63,7 @@ const Work = ({
       subtitle: 'Jun 2020 - Sep 2020',
       title: 'Westboro Photonics',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'Worked directly with a Software Architect to develop a client portal for Westboro Photonics. The protral allowed customers to manage their serial keys and instruments that were bought from the company. The webstite was developed in Angular 9 and authenticated using JWT tokens. A NestJS backend server was used and FireStore for a database.',
       url: 'https://wphotonics.com/',
     },
 
@@ -72,7 +72,7 @@ const Work = ({
       subtitle: 'Feb 2020 - May 2020',
       title: 'Canadian Food Inspection Agency',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'Assited with imported goods data clean up and optimization to streamline the data integration within existing management systems. Presented reports and analytics results to management and effectively commincated key findings',
       url: 'https://inspection.canada.ca/eng/1297964599443/1297965645317',
     },
   ]

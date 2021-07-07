@@ -30,7 +30,7 @@ const Offsetbackground = tw.div`absolute inset-0 bg-gray-300 rounded xl:-mb-8`
 const ImageDecoratorBlob = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none z-10 absolute right-0 bottom-0 transform translate-x-10 translate-y-10 h-32 w-32 opacity-25 text-gray-900 fill-current`}
 `
-const Testimonial = tw.div`max-w-sm rounded-b md:rounded-none relative sm:absolute bottom-0 inset-x-0 z-20 px-8 py-6 sm:px-10 sm:py-8 bg-primary-500 text-gray-100 font-medium transform md:-translate-x-32 text-base leading-relaxed md:-mr-16 xl:mr-0`
+const Testimonial = tw.div`max-w-sm rounded-b md:rounded-none relative sm:absolute bottom-0 inset-x-0 z-20 px-8 py-6 sm:px-10 sm:py-8 bg-primary-500 text-gray-100 font-medium transform md:-translate-x-40 text-base leading-relaxed md:translate-y-16 md:-mr-16 xl:mr-0`
 const QuotesLeftIcon = tw(
   QuotesLeftIconBase
 )`w-16 h-16 md:w-12 md:h-12 absolute top-0 left-0 text-gray-100 md:text-red-500 transform translate-x-1 md:-translate-x-1/2 md:-translate-y-5 opacity-10 md:opacity-100`
@@ -45,11 +45,11 @@ const SocialLink = styled.a`
 `
 const Hero = ({
   heading = 'Full Stack Web Developer',
-  description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+  description = 'Experience with Popular Frontend frameworks like React and Angular, as well as, Backend langugaes like Node.js and Java. Additionally, developed mobile apps in Android and React Native and experimented with Flask and Python',
   imageSrc = 'https://i.postimg.cc/WzbjNG0s/Ahmed-Picture.jpg',
   primaryButtonUrl = '#contact',
   primaryButtonText = 'Contact Me',
-  testimonial = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  testimonial = 'Hi, my name is Ahmed Aziz and I am a Full Stack Developer and a former Mechanical Engineer. I always had a passion for Software Development and tech well before getting into the field.',
 }) => {
   return (
     <Container>

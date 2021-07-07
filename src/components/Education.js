@@ -76,22 +76,21 @@ const Education = ({
   const courses = [
     {
       imageSrc: 'https://i.postimg.cc/tTwPW4RZ/Algonquin.jpg',
-      description:
-        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
+      description: `A 2 year Ontario college diploma in Computer Programming from Algonquin College.
+      Graduated with honours and co-op distinguishment with a cumulative GPA of 3.96/4`,
       collegeName: 'Algonquin College',
       courseDate: 'May 2021',
     },
     {
       imageSrc: 'https://i.postimg.cc/T1nybjHF/AAST.jpg',
-      description:
-        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
+      description: `Mechanical Engineering bachelor degree from AAST, Alexandria, Egypt. Graduated with honours with a cumulative GPA of 3.74/4`,
       collegeName: 'Arab Academy for Sceience and Technology',
       courseDate: 'July 2012',
     },
     {
       imageSrc: 'https://i.postimg.cc/sXh1F9yx/Full-Stack.png',
       description:
-        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.',
+        'A Full stack modern web development course offered by the university of Helsinki in colaboration with Houston Inc.',
       collegeName: 'University of Helsinki',
       courseDate: 'July 2021',
     },

@@ -43,7 +43,7 @@ const ContactMe = ({
       Feel free to <span tw="text-primary-500">get in touch</span>
     </>
   ),
-  description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  description = 'I am always open for new oportunities and challenges, you can contact me using this form or threw my email address.',
   submitButtonText = 'Send',
   textOnLeft = true,
 }) => {

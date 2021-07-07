@@ -48,7 +48,7 @@ const Projects = ({
       Personal <span tw="text-primary-500">Projects</span>
     </>
   ),
-  description = 'Personal Projects created for fun and educational purposes',
+  description = 'Projects I enjoyed to create utilizing technologies I was intrested in',
 }) => {
   const projects = [
     {
@@ -56,7 +56,7 @@ const Projects = ({
       technologies: ['React', 'Redux', 'Node.js', 'MongoDB'],
       title: 'Bloglist Website with User Authentication',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Developing a simple blog list web application utilizing Redux with React for global state management. Node.js with Express was used for building RESTful APIs to serve the application. MongoDB was used as the database of choice.',
       url: 'https://github.com/synges/BlogList',
     },
     {
@@ -64,7 +64,7 @@ const Projects = ({
       technologies: ['React Native', 'React', 'FireStore'],
       title: 'Mobile Application for RiverOak Skating Trails',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Created a Mobile application for the Riveroak Skating trails located south of Ottawa. The mobile app lets customers check for ice condtions of winter trails, as well as, find useful information events and other activities been held there. The app was developed using React native and Firestore, in addition to a React web app for the admin.',
       url: 'https://expo.io/@riveroakapp21/RiverOak',
     },
     {
@@ -72,7 +72,7 @@ const Projects = ({
       technologies: ['Python', 'Flask', 'MySQL'],
       title: 'Covid-19 Data Visualization Website',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Developed a simple web application in Flask that pulls covid-19 from a local MySQL database. Utilized Python libraries Pandas and Matplotlib to plot a graph for case numbers by province.',
       url: 'https://github.com/synges/Flask-Covid-19',
     },
   ]
