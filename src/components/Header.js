@@ -10,26 +10,30 @@ import { ReactComponent as CloseIcon } from 'feather-icons/dist/icons/x.svg'
 
 const Container = tw.header`
   flex justify-between items-center
-  max-w-none mx-auto p-5 pb-8
+  max-w-none mx-auto p-5 py-12
 `
 
 const NavLinks = tw.div`inline-block`
 
 const NavLink = tw(AnchorLink)`
-  text-lg my-2  lg:text-base  lg:my-0 lg:mx-12
+  text-lg my-2 lg:my-0 lg:mx-12
   font-semibold tracking-wide transition duration-300 text-secondary-500
   pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `
 
 const PrimaryLink = tw.a`
-  lg:mx-0  text-lg my-2 lg:text-sm  lg:my-0
+  lg:mx-0  text-lg my-2   lg:my-0
   font-semibold tracking-wide transition duration-300
-  px-8 py-3 rounded bg-primary-500 text-gray-100
+  px-5 py-3 lg:py-5 lg:px-8 rounded bg-primary-500 text-gray-100
   hocus:bg-primary-900 hocus:text-gray-200 
   border-b-0 rounded-full whitespace-nowrap
 `
-
-const LogoLink = styled(NavLink)`
+const LogoLinkBase = tw.a`
+  text-lg my-2  lg:my-0 lg:mx-12
+  font-semibold tracking-wide transition duration-300 text-secondary-500
+  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+`
+const LogoLink = styled(LogoLinkBase)`
   ${tw`flex items-center font-black text-secondary-500 border-b-0 text-2xl! ml-0!`};
 
   img {
@@ -63,7 +67,7 @@ const Header = () => {
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink
-        href="https://drive.google.com/uc?export=download&id=11b3dTCZscchgS5MAGfTb1CSv0ylgCz-D"
+        href="https://drive.google.com/uc?export=download&id=1kz_F22ooP8bYZcpWT75aydY_OJ2AiJxb"
         download
       >
         Download Resume
@@ -82,7 +86,7 @@ const Header = () => {
   }
 
   const logoLink = (
-    <LogoLink href="/">
+    <LogoLink href="https://ahmedsaziz.com/">
       <img src={logo} alt="logo" />
       Ahmed Aziz
     </LogoLink>
