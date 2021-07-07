@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import tw from 'twin.macro'
 import styled from 'styled-components'
 import EmailIllustrationSrc from 'images/email-illustration.svg'
 import emailjs from 'emailjs-com'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Container = tw.div`relative`
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-16 md:py-20`
@@ -47,25 +49,50 @@ const ContactMe = ({
   submitButtonText = 'Send',
   textOnLeft = true,
 }) => {
-  const sendEmail = (e) => {
-    e.preventDefault()
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
 
-    emailjs
-      .sendForm(
-        'gmail',
-        'template_qdbmktu',
-        e.target,
-        'user_3XxV613K5PXDydSwOg3pA'
-      )
-      .then(
-        (result) => {
-          console.log(result.text)
-        },
-        (error) => {
-          console.log(error.text)
-        }
-      )
-    e.target.reset()
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value)
+  }
+  const handleNameChange = (event) => {
+    setName(event.target.value)
+  }
+  const handleSubjectChange = (event) => {
+    setSubject(event.target.value)
+  }
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value)
+  }
+
+  const validate = (...strings) => {
+    for (const element of strings) {
+      if (element.trim() === '') {
+        toast.error('Missing or Empty fields in the contact form')
+        return false
+      }
+    }
+    return true
+  }
+
+  const hanndleSubmit = (e) => {
+    e.preventDefault()
+    if (validate(email, name, subject, message)) {
+      emailjs
+        .sendForm(
+          'gmail',
+          'template_qdbmktu',
+          e.target,
+          'user_3XxV613K5PXDydSwOg3pA'
+        )
+        .then(toast.success('Thanks for reaching out'))
+      setMessage('')
+      setEmail('')
+      setSubject('')
+      setName('')
+    }
   }
 
   return (
@@ -79,16 +106,40 @@ const ContactMe = ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
-            <Form onSubmit={sendEmail}>
-              <Input type="email" name="email" placeholder="Email Address" />
-              <Input type="text" name="name" placeholder="Full Name" />
-              <Input type="text" name="subject" placeholder="Subject" />
-              <Textarea name="message" placeholder="Your Message Here" />
+            <Form onSubmit={hanndleSubmit}>
+              <Input
+                type="email"
+                name="email"
+                value={email}
+                onChange={handleEmailChange}
+                placeholder="Email Address"
+              />
+              <Input
+                type="text"
+                name="name"
+                value={name}
+                onChange={handleNameChange}
+                placeholder="Full Name"
+              />
+              <Input
+                type="text"
+                name="subject"
+                value={subject}
+                onChange={handleSubjectChange}
+                placeholder="Subject"
+              />
+              <Textarea
+                name="message"
+                value={message}
+                onChange={handleMessageChange}
+                placeholder="Your Message Here"
+              />
               <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>
         </TextColumn>
       </TwoColumn>
+      <ToastContainer />
     </Container>
   )
 }
