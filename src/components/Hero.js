@@ -49,7 +49,7 @@ const Hero = ({
   imageSrc = 'https://i.postimg.cc/WzbjNG0s/Ahmed-Picture.jpg',
   primaryButtonUrl = '#contact',
   primaryButtonText = 'Contact Me',
-  testimonial = 'Hi, my name is Ahmed Aziz and I am a Full Stack Developer with a background in Mechanical Engineering. My passion for Software Development and Tech stemmed from my love of challanges and problem solving.',
+  testimonial = 'Hi, my name is Ahmed Aziz and I am a Full Stack Developer with a background in Mechanical Engineering. My passion for Software Development and Tech stems from my love of challenges and problem solving.',
 }) => {
   return (
     <Container>
