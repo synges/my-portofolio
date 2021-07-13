@@ -67,7 +67,7 @@ const Header = () => {
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink
-        href="https://drive.google.com/uc?export=download&id=1kz_F22ooP8bYZcpWT75aydY_OJ2AiJxb"
+        href="https://drive.google.com/uc?export=download&id=15YS08gWGPIX6wYiH_gxvf6ai9Iih2xVX"
         download
       >
         Download Resume
