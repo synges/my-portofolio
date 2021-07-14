@@ -54,7 +54,7 @@ const Work = ({
       subtitle: 'Sep 2020 - Dec 2020',
       title: 'MNP LLP',
       description:
-        'Worked withing a dynamic team on the mnp.ca website redesign project. Developed responsive frontend components utilizing Sass as a css preprocessor and the jQuery library for functionality. Additionally, collaborated with the team in an Agile way and adhered to sprint deadlines.',
+        'Worked withing a dynamic team on the mnp.ca website redesign project. Developed responsive frontend components utilizing Sass as a css preprocessor and the jQuery library for functionality. Additionally, colaborated on a project for the city of Ottawa to model a new MySQL database to Java objects utilizing Hibernate.',
       url: 'https://www.mnp.ca/',
     },
 
