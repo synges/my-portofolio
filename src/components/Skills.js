@@ -84,12 +84,12 @@ const Skills = () => {
       </Heading>
       <VerticalSpacer />
       <Description>Languages and Frameworks I feel confident in</Description>
-      <Marquee list={PROFICIENT} time={9} rightToLeft={false} />
+      <Marquee list={PROFICIENT} time={9} />
       <VerticalSpacer />
       <Description>
         Technologies I have exposure and basic experience with
       </Description>
-      <Marquee list={EXPOSURE} time={9} rightToLeft={true} />
+      <Marquee list={EXPOSURE} time={9} rightToLeft />
     </Container>
   )
 }

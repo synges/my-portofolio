@@ -9,7 +9,6 @@ const moveLeft = keyframes`
 `
 
 const MarqueeContainer = styled.div`
-  ${(props) => props.children.props.rightToLeft && 'direction:rtl'};
   position: relative;
   width: 100%;
   margin-top: 20px;
@@ -43,9 +42,10 @@ const MarqueeArea = styled.div`
   whitespace-nowrap
   `}
   transform: translateX(
-    ${(props) => !props.rightToLeft && '-'}${(props) => props.move}px
+   -${(props) => props.move}px
   );
-  animation: ${moveLeft} ${(props) => props.time}s linear infinite;
+  animation: ${moveLeft} ${(props) => props.time}s linear infinite
+    ${(props) => (props.rightToLeft ? ' reverse' : '')};
   animation-play-state: inherit;
 `
 
