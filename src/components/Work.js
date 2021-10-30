@@ -50,6 +50,14 @@ const Work = ({
 }) => {
   const cards = [
     {
+      imageSrc: 'https://i.postimg.cc/JzFS92FR/Nokia.png',
+      subtitle: 'Aug 2021 - Present',
+      title: 'Nokia',
+      description:
+        'Part of the iSIM team developing Remote SIM provisioning solutions for the next generation of Embedded and Integerated Sim cards. The RSP solution utilizses a microservesises aritecture written in Java with a Angular Frontend app.',
+      url: 'https://www.nokia.com/',
+    },
+    {
       imageSrc: 'https://i.postimg.cc/zBCmcxM7/MNP.png',
       subtitle: 'Sep 2020 - Dec 2020',
       title: 'MNP LLP',

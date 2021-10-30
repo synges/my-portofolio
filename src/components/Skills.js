@@ -26,8 +26,8 @@ import auth0 from 'logos/auth0.svg'
 import graphql from 'logos/graphql.svg'
 import mysql from 'logos/mysql.svg'
 import heroku from 'logos/heroku.svg'
-import sqlite from 'logos/sqlite.svg'
-import socketio from 'logos/socketio.svg'
+import kubernetes from 'logos/kubernetes.svg'
+import docker from 'logos/docker.svg'
 import webpack from 'logos/webpack.svg'
 import oracle from 'logos/oracle.svg'
 import bootstrap from 'logos/bootstrap.svg'
@@ -52,7 +52,6 @@ const PROFICIENT = [
   typescript,
   sass,
   tailwindcss,
-  hibernate,
   git,
   express,
 ]
@@ -64,11 +63,12 @@ const EXPOSURE = [
   firebase,
   netlify,
   auth0,
+  kubernetes,
+  docker,
   graphql,
   mysql,
   heroku,
-  sqlite,
-  socketio,
+  hibernate,
   webpack,
   oracle,
   nestjs,
