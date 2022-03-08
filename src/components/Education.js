@@ -77,7 +77,7 @@ const Education = ({
     {
       imageSrc: 'https://i.postimg.cc/tTwPW4RZ/Algonquin.jpg',
       description:
-        "Graduated with honours and co-op distinction (GPA: 3.96) from Algonquin College's college diploma in Computer Programming (2 year).",
+        "Graduated with honours and co-op distinction (GPA: 3.96) from Algonquin College's diploma in Computer Programming (2 year).",
       collegeName: 'Algonquin College',
       courseDate: 'May 2021',
     },
